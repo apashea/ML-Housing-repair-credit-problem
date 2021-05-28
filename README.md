@@ -7,17 +7,19 @@ This project uses machine-learning methods, including model comparisons and metr
 - Logit models
 - (Repeated) cross-validation
 - Random forest models
-    - cross-validation
-    - grid search
-- Down- and up-sampling
+    - Repeated cross-validation
+    - Grid search
+- Down-/up-sampling and other methods for tackling imbalanced data
 - Ensemble model training and comparison (Random forest, glmnet, Support Vector Machine)
-- Confusion matrices
+- Confusion matrices (and how to interpret them for use in cost-benefit analyses)
 - ROC curves / Area under the curve calculation and visualization
 - Model threshold optimization and cost-benefit optimization with visualization
-- Cost-benefit analyses and tables for comparing total social benefit and campaign losses between a scenario with no model versus the final model at optimal threshold
+- Cost-benefit analyses and tables for comparing total social benefit and campaign losses between using the final chosen model versus not using a model
 
 
 This project imagines a city department who runs 'marketing' campaigns by allocating resources for contacting and working with eligible homeowners who might accept a home repair tax credit. In this scenario, previous campaigns have unfortunately gone poorly due to no selectivity over which homeowners to contact: only around 11% ultimately accepted the credit last period, with an assumed 75% of those who accepted being homeowners who already planned to apply for the credit regardless of the campaign, and so many marketing campaign resources were counted as losses. Meanwhile, the department has collected data on eligible homeowners prior to contacting them and hires its first data science team to see what can be done to improve resource allocation.
 
 This is treated as a binary classification problem of predicting if someone will or will not accept the credit so that the department can exercise more discretion in whom it contacts, and thus in whom it allocates resources that otherwise might be lost. The project tries and evaluates a small variety of models using different techniques and sampling methods to find one better suited for classifying this data. At the end, the project undertakes a cost-benefit analysis with visualization to help the department understand how using this model can help them improve their resource allocation.
 
+Future plans/notes for improvement: 
+The final chosen model in this project, a random forest using repeated cross-validation and down-sampling, could be improved by being combined with grid search and higher k-folds and repetitions of cross-validation. While the latter were kept small for the sake of quicker computing, the model (and others tried in the script) could easily be improved with methods like these just mentioned.
