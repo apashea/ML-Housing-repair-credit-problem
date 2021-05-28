@@ -658,7 +658,8 @@ whichThreshold_benefit %>%
   geom_point() +
   geom_vline(xintercept = pull(arrange(whichThreshold_revenue, -Total_benefit)[1,1])) +
   scale_y_continuous(breaks = round(seq(min(-6000000), max(3000000), by = 500000),10)) +
-  labs(title = "Total social benefit with campaign resources lost by threshold",
+  labs(y = "Value ($)",
+       title = "Total social benefit with campaign resources lost by threshold",
        subtitle = paste0("Vertical line denotes optimal threshold of ", optimal_threshold),
        caption = "Campaign_Loss: Resource loss from misprediction
        Total_Benefit: Social benefit minus resource and credit allocation") +
