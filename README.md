@@ -21,5 +21,11 @@ This project imagines a city department who runs 'marketing' campaigns by alloca
 
 This is treated as a binary classification problem of predicting if someone will or will not accept the credit so that the department can exercise more discretion in whom it contacts, and thus in whom it allocates resources that otherwise might be lost. The project tries and evaluates a small variety of models using different techniques and sampling methods to find one better suited for classifying this data. At the end, the project undertakes a cost-benefit analysis with visualization to help the department understand how using this model can help them improve their resource allocation.
 
+Cost-benefit analysis givens:
+- $2,850 is allocated per homeowner contacted to facilitate phone calls, information and counseling sessions at the institution's offices, and mailers
+- $5,000 in credit is allocated to each eligible homeowner who has already explicitly accepted the credit
+- Research shows individual homeowners who accept the credit and sell their homes see a $10,000 premium for their home.
+- Research shows houses surrounding homes who accepted the credit see an average aggregate premium of $56,000.
+
 Future plans/notes for improvement: 
 The final chosen model in this project, a random forest using repeated cross-validation and down-sampling, could be improved by being combined with grid search and higher k-folds and repetitions of cross-validation. While the latter were kept small for the sake of quicker computing, the model (and others tried in the script) could easily be improved with methods like these just mentioned.
